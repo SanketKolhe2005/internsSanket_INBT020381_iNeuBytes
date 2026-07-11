@@ -38,18 +38,18 @@ The objective of this project is to perform sentiment analysis on the IMDb Movie
 ```text
 Task_2/
 │
-├── Task2_Sentiment_Analysis.ipynb
+├── Task_2_Sentiment_Analysis_using_Machine_Learning_and_Deep_Learning.ipynb
 ├── logistic_model.pkl
 ├── svm_model.pkl
 ├── lstm_sentiment_model.keras
+├── Model Comparison Chart.png
 ├── requirements.txt
 ├── README.md
 │
 └── screenshots/
-    ├── model_comparison.png
-    ├── logistic_confusion_matrix.png
-    ├── svm_confusion_matrix.png
-    └── lstm_confusion_matrix.png
+    ├── Confusion_Matrix_Logistic.png
+    ├── Confusion_Matrix_SVM.png
+    └── Confusion_Matrix_LSTM.png
 ```
 
 ---
@@ -74,7 +74,7 @@ Task_2/
 
 ## 3️⃣ Long Short-Term Memory (LSTM)
 
-- Tokenizer
+- Tokenization
 - Embedding Layer
 - LSTM Layer
 - Dense Output Layer
@@ -106,37 +106,37 @@ The models were evaluated using:
 
 # 📸 Results
 
-## Model Comparison
+## 📊 Model Comparison
 
-![Model Comparison](screenshots/model_comparison.png)
-
----
-
-## Logistic Regression Confusion Matrix
-
-![Logistic Regression](screenshots/confusion_matrix_Logistic.png)
+![Model Comparison](Model%20Comparison%20Chart.png)
 
 ---
 
-## Support Vector Machine Confusion Matrix
+## 📈 Logistic Regression Confusion Matrix
 
-![SVM](screenshots/confusion_matrix_SVM.png)
+![Logistic Regression](screenshots/Confusion_Matrix_Logistic.png)
 
 ---
 
-## LSTM Confusion Matrix
+## 📈 Support Vector Machine (SVM) Confusion Matrix
 
-![LSTM](screenshots/lstm_confusion_matrix.png)
+![SVM](screenshots/Confusion_Matrix_SVM.png)
+
+---
+
+## 📈 LSTM Confusion Matrix
+
+![LSTM](screenshots/Confusion_Matrix_LSTM.png)
 
 ---
 
 # 🔍 Observations
 
-- Logistic Regression achieved the **highest accuracy (87.82%)** among all models.
+- Logistic Regression achieved the highest accuracy (**87.82%**) among all models.
 - Support Vector Machine achieved **86.08%** accuracy with competitive performance.
-- LSTM achieved **85.69%** accuracy and effectively captured sequential text patterns.
-- Classical Machine Learning models (Logistic Regression and SVM) performed slightly better than the LSTM model on this dataset while requiring less training time.
-- Logistic Regression proved to be the most efficient model for IMDb sentiment classification in this project.
+- LSTM achieved **85.69%** accuracy and effectively captured sequential information in text.
+- Logistic Regression produced the fewest misclassifications and offered the best balance of accuracy and computational efficiency.
+- Classical Machine Learning models performed slightly better than the Deep Learning model on the IMDb dataset used in this project.
 
 ---
 
@@ -150,6 +150,7 @@ The models were evaluated using:
 - Attention Mechanism
 - Transfer Learning
 - Larger NLP Datasets
+- Real-Time Sentiment Prediction Web Application
 
 ---
 
@@ -157,11 +158,20 @@ The models were evaluated using:
 
 **Sanket Kolhe**
 
-B.Tech Computer Engineering  
+B.Tech Computer Engineering
+
 MIT Academy of Engineering, Pune
+
+GitHub: https://github.com/SanketKolhe2005
+
+LinkedIn: https://www.linkedin.com/in/sanket-kolhe-b2683525b
 
 ---
 
 # 📄 License
 
 This project was developed as part of the **iNeuBytes Artificial Intelligence Internship** for educational purposes.
+
+---
+
+⭐ If you found this project helpful, don't forget to star the repository!
