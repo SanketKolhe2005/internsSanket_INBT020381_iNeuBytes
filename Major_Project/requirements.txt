@@ -1,8 +1,8 @@
 Flask
-spacy
-PyMuPDF
+gunicorn
 pandas
 numpy
 scikit-learn
+PyMuPDF
+reportlab
 Werkzeug
-gunicorn
