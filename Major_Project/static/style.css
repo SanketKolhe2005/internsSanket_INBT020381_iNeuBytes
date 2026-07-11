@@ -1,0 +1,565 @@
+/* ===========================
+   AI Resume Analyzer
+   Professional Dashboard UI
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#4F46E5,#2563EB);
+
+    min-height:100vh;
+
+    padding:40px;
+
+}
+
+/* Dashboard */
+
+.dashboard{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+/* Header */
+
+header{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+header h1{
+
+    color:white;
+
+    font-size:42px;
+
+    font-weight:700;
+
+}
+
+header h1 i{
+
+    color:#FFD43B;
+
+}
+
+/* Grid */
+
+.top-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:25px;
+
+}
+
+.middle-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+    margin-top:25px;
+
+}
+
+/* Card */
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.card h2{
+
+    color:#2563EB;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.card h2 i{
+
+    margin-right:10px;
+
+}
+
+/* Candidate Details */
+
+.detail{
+
+    margin-bottom:18px;
+
+}
+
+.detail p{
+
+    color:#555;
+
+    font-size:15px;
+
+}
+
+.detail span{
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#111827;
+
+}
+
+/* Score Box */
+
+.score-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.circle{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#10B981,#22C55E);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:38px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    box-shadow:0 10px 25px rgba(34,197,94,.4);
+
+}
+
+.score-box h3{
+
+    color:#2563EB;
+
+    margin-bottom:20px;
+
+}
+
+/* Progress */
+
+.progress{
+
+    width:100%;
+
+    height:18px;
+
+    background:#E5E7EB;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    height:100%;
+
+    background:linear-gradient(90deg,#22C55E,#10B981);
+
+    border-radius:20px;
+
+    transition:width 1s;
+
+}
+
+/* Skill Chips */
+
+.chips{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:10px;
+
+}
+
+.chip{
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    color:white;
+
+    font-weight:500;
+
+    font-size:15px;
+
+}
+
+.green{
+
+    background:#22C55E;
+
+}
+
+.red{
+
+    background:#EF4444;
+
+}
+
+/* ===========================
+   Job Cards
+=========================== */
+
+.job-card{
+
+    background:linear-gradient(135deg,#2563EB,#4F46E5);
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:12px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    box-shadow:0 5px 15px rgba(37,99,235,.3);
+
+    transition:.3s;
+
+}
+
+.job-card:hover{
+
+    transform:translateX(5px);
+
+}
+
+/* ===========================
+   Suggestions
+=========================== */
+
+.tips{
+
+    list-style:none;
+
+    margin-top:10px;
+
+}
+
+.tips li{
+
+    background:#F3F4F6;
+
+    padding:12px;
+
+    border-left:5px solid #2563EB;
+
+    border-radius:8px;
+
+    margin-bottom:12px;
+
+    color:#374151;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.tips li:hover{
+
+    background:#DBEAFE;
+
+}
+
+/* ===========================
+   Resume Preview
+=========================== */
+
+textarea{
+
+    width:100%;
+
+    height:350px;
+
+    resize:none;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    background:#F9FAFB;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    color:#374151;
+
+    outline:none;
+
+    box-shadow:inset 0 0 10px rgba(0,0,0,.08);
+
+}
+
+/* ===========================
+   Bottom Button
+=========================== */
+
+.btn-area{
+
+    text-align:center;
+
+    margin:40px 0;
+
+}
+.download-btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+    color:#fff;
+    text-decoration:none;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 10px 20px rgba(34,197,94,.3);
+}
+
+.download-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 25px rgba(34,197,94,.45);
+}
+.analyze-btn{
+
+    background:linear-gradient(135deg,#FF8A00,#FF5E00);
+
+    color:white;
+
+    border:none;
+
+    padding:16px 45px;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(255,94,0,.35);
+
+}
+
+.analyze-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(255,94,0,.45);
+
+    background:linear-gradient(135deg,#FF5E00,#FF8A00);
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563EB;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#E5E7EB;
+
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media(max-width:992px){
+
+.top-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.middle-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.circle{
+
+width:140px;
+
+height:140px;
+
+font-size:32px;
+
+}
+
+header h1{
+
+font-size:34px;
+
+}
+
+.card{
+
+padding:20px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+body{
+
+padding:20px;
+
+}
+
+.dashboard{
+
+width:100%;
+
+}
+
+header h1{
+
+font-size:28px;
+
+}
+
+.card h2{
+
+font-size:20px;
+
+}
+
+.circle{
+
+width:120px;
+
+height:120px;
+
+font-size:28px;
+
+}
+
+.chip{
+
+font-size:14px;
+
+padding:8px 14px;
+
+}
+
+.analyze-btn{
+
+width:100%;
+
+font-size:16px;
+
+}
+
+textarea{
+
+height:250px;
+
+}
+
+}

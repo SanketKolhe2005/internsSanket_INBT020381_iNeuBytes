@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <header>
+
+        <h1>
+            <i class="fa-solid fa-robot"></i>
+            AI Resume Analyzer
+        </h1>
+
+    </header>
+
+    <div class="top-grid">
+
+        <div class="card">
+
+            <h2>
+                <i class="fa-solid fa-user"></i>
+                Candidate Details
+            </h2>
+
+            <div class="detail">
+
+                <p><strong>Name</strong></p>
+                <span>{{name}}</span>
+
+            </div>
+
+            <div class="detail">
+
+                <p><strong>Email</strong></p>
+                <span>{{email}}</span>
+
+            </div>
+
+            <div class="detail">
+
+                <p><strong>Phone</strong></p>
+                <span>{{phone}}</span>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>
+
+                <i class="fa-solid fa-chart-simple"></i>
+
+                ATS Score
+
+            </h2>
+
+            <div class="score-box">
+
+                <div class="circle">
+
+                    {{score}}%
+
+                </div>
+
+                <h3>{{grade}}</h3>
+
+            </div>
+
+            <div class="progress">
+
+                <div class="progress-bar"
+
+                    style="width:{{score}}%;">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>
+
+            <i class="fa-solid fa-check-circle"></i>
+
+            Extracted Skills
+
+        </h2>
+
+        <div class="chips">
+
+            {% for skill in skills %}
+
+            <span class="chip green">
+
+                {{skill}}
+
+            </span>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>
+
+            <i class="fa-solid fa-circle-xmark"></i>
+
+            Missing Skills
+
+        </h2>
+
+        <div class="chips">
+
+            {% for skill in missing %}
+
+            <span class="chip red">
+
+                {{skill}}
+
+            </span>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <div class="middle-grid">
+
+        <div class="card">
+
+            <h2>
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                Recommended Roles
+
+            </h2>
+
+            {% if jobs %}
+
+            {% for job in jobs %}
+
+            <div class="job-card">
+
+                {{job}}
+
+            </div>
+
+            {% endfor %}
+
+            {% else %}
+
+            <p>No suitable role found.</p>
+
+            {% endif %}
+
+        </div>
+
+        <div class="card">
+
+            <h2>
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                Resume Suggestions
+
+            </h2>
+
+            {% if suggestions %}
+
+            <ul class="tips">
+
+                {% for s in suggestions %}
+
+                <li>{{s}}</li>
+
+                {% endfor %}
+
+            </ul>
+
+            {% else %}
+
+            <ul class="tips">
+
+                <li>Add more relevant technical skills.</li>
+                <li>Include measurable achievements.</li>
+                <li>Add GitHub and LinkedIn profile.</li>
+                <li>Mention certifications.</li>
+                <li>Use action verbs in project descriptions.</li>
+
+            </ul>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            Resume Preview
+
+        </h2>
+
+        <textarea readonly>
+
+{{resume_text}}
+
+        </textarea>
+
+    </div>
+    <a href="/download">
+
+<button class="download-btn">
+
+Download Report
+
+</button>
+
+</a>
+    <div class="btn-area">
+
+        <a href="/">
+
+            <button class="analyze-btn">
+
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+
+                Analyze Another Resume
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
