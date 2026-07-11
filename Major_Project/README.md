@@ -68,8 +68,8 @@ Major_Project/
 │
 ├── screenshots/
 │   ├── home_page.png
-│   ├── Resume Analysis Dashboard (Part 1).png
-│   ├── Resume Analysis Dashboard (Part 2).png
+│   ├── resume_dashboard_1.png
+│   ├── resume_dashboard_2.png
 │   ├── pdf_report.png
 │   ├── api_testing.png
 │   └── postman_api_response.png
@@ -184,13 +184,13 @@ The ATS score is calculated based on:
 
 ## 📊 Resume Analysis Dashboard (Part 1)
 
-![Dashboard 1](screenshots/Resume Analysis Dashboard (Part 1).png)
+![Dashboard 1](screenshots/resume_dashboard_1.png)
 
 ---
 
 ## 📊 Resume Analysis Dashboard (Part 2)
 
-![Dashboard 2](screenshots/Resume Analysis Dashboard (Part 2).png)
+![Dashboard 2](screenshots/resume_dashboard_2.png)
 
 ---
 
