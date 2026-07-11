@@ -1,0 +1,4 @@
+Experiment,Accuracy
+Baseline,0.6998999714851379
+Dropout,0.701200008392334
+BatchNorm,0.6539999842643738

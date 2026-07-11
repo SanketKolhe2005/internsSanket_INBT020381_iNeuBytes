@@ -1,0 +1,5 @@
+Experiment,Accuracy
+Baseline,0.6999
+Dropout,0.7012
+BatchNorm,0.654
+Final CNN,0.7695000171661377
