@@ -184,13 +184,13 @@ The ATS score is calculated based on:
 
 ## 📊 Resume Analysis Dashboard (Part 1)
 
-![Dashboard 1](screenshots/dashboard_1.png)
+![Dashboard 1](screenshots/Resume Analysis Dashboard (Part 1).png)
 
 ---
 
 ## 📊 Resume Analysis Dashboard (Part 2)
 
-![Dashboard 2](screenshots/dashboard_2.png)
+![Dashboard 2](screenshots/Resume Analysis Dashboard (Part 2).png)
 
 ---
 
