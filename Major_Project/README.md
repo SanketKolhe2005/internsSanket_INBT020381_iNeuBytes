@@ -68,8 +68,8 @@ Major_Project/
 │
 ├── screenshots/
 │   ├── home_page.png
-│   ├── dashboard_1.png
-│   ├── dashboard_2.png
+│   ├── Resume Analysis Dashboard (Part 1).png
+│   ├── Resume Analysis Dashboard (Part 2).png
 │   ├── pdf_report.png
 │   ├── api_testing.png
 │   └── postman_api_response.png
