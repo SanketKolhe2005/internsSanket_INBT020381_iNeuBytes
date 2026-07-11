@@ -1,0 +1,8 @@
+Flask
+spacy
+PyMuPDF
+pandas
+numpy
+scikit-learn
+Werkzeug
+gunicorn
