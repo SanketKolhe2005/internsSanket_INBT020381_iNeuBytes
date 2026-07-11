@@ -114,13 +114,13 @@ The models were evaluated using:
 
 ## Logistic Regression Confusion Matrix
 
-![Logistic Regression](screenshots/logistic_confusion_matrix.png)
+![Logistic Regression](screenshots/confusion_matrix_Logistic.png)
 
 ---
 
 ## Support Vector Machine Confusion Matrix
 
-![SVM](screenshots/svm_confusion_matrix.png)
+![SVM](screenshots/confusion_matrix_SVM.png)
 
 ---
 
