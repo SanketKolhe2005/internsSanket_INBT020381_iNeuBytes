@@ -1,111 +1,127 @@
-# 🤖 AI Resume Analyzer & ATS Score Predictor
+# AI Resume Analyzer & ATS Score Predictor
 
-An AI-powered Resume Analyzer built using **Flask**, **Python**, and **NLP** that analyzes uploaded resumes, extracts candidate details, calculates an ATS (Applicant Tracking System) score, identifies missing skills, recommends suitable job roles, and generates a downloadable PDF report.
+## Overview
 
----
+AI Resume Analyzer & ATS Score Predictor is a Flask-based web application that analyzes resumes using Artificial Intelligence and Natural Language Processing (NLP). The system evaluates resumes by extracting candidate information, predicting the most suitable job category using a trained machine learning model, calculating an ATS (Applicant Tracking System) score, identifying missing skills, recommending relevant job roles, and generating downloadable reports.
 
-# 📌 Features
-
-- 📄 Upload Resume (PDF)
-- 👤 Extract Candidate Name
-- 📧 Extract Email Address
-- 📱 Extract Phone Number
-- 🧠 AI-Based Skill Extraction
-- 📊 ATS Score Prediction
-- ❌ Missing Skills Detection
-- 💼 AI Job Role Recommendation
-- 💡 Resume Improvement Suggestions
-- 📄 Download PDF Analysis Report
-- 🌐 REST API for Resume Analysis
-- 🎨 Responsive Web Interface
+This project was enhanced with a resume dataset (50MB+) and a trained machine learning model to improve resume classification accuracy.
 
 ---
 
-# 🛠 Technologies Used
+## Features
 
-## Backend
-
-- Python
-- Flask
-- ReportLab
-
-## AI / NLP
-
-- PyMuPDF (fitz)
-- Pandas
-- Scikit-learn
-
-## Frontend
-
-- HTML5
-- CSS3
-- JavaScript
+- Upload Resume (PDF)
+- Resume Text Extraction
+- Name, Email & Phone Number Extraction
+- AI-Based Resume Category Prediction
+- ATS Score Calculation
+- Skill Extraction
+- Missing Skill Identification
+- Job Role Recommendations
+- PDF Report Generation
+- REST API Support
+- User-Friendly Flask Web Interface
 
 ---
 
-# 📂 Project Structure
+## Machine Learning Model
 
-```text
-Major_Project/
+### Dataset
+
+- Resume Dataset (50MB+)
+- 2,484 resumes
+- 24 job categories
+
+### Model
+
+- TF-IDF Vectorization
+- Linear Support Vector Classifier (LinearSVC)
+- Text Cleaning & Preprocessing
+- Balanced Class Weights
+
+### Model Performance
+
+- Accuracy: **72.23%**
+
+---
+
+## Project Structure
+
+```
+AI Resume Analyzer/
 │
 ├── app.py
 ├── ats.py
 ├── recommender.py
 ├── resume_parser.py
 ├── report_generator.py
-├── skills.csv
-├── job_roles.csv
-├── requirements.txt
-├── README.md
+│
+├── dataset/
+│   └── Resume.csv
+│
+├── models/
+│   └── resume_classifier.pkl
+│
+├── results/
+│   ├── classification_report.txt
+│   └── confusion_matrix.png
 │
 ├── templates/
-│   ├── index.html
-│   └── result.html
-│
 ├── static/
-│   ├── style.css
-│   └── script.js
+├── uploads/
 │
-├── screenshots/
-│   ├── home_page.png
-│   ├── resume_dashboard_1.png
-│   ├── resume_dashboard_2.png
-│   ├── pdf_report.png
-│   ├── api_testing.png
-│   └── postman_api_response.png
+├── prepare_dataset.py
+├── train_model.py
+├── predict.py
 │
-└── uploads/
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-# ⚙ Installation
+## Technologies Used
 
-## Clone Repository
+- Python
+- Flask
+- Scikit-learn
+- Pandas
+- NumPy
+- Joblib
+- PDFPlumber / PyPDF2
+- HTML
+- CSS
+- JavaScript
+
+---
+
+## Installation
+
+Clone the repository
 
 ```bash
-git clone https://github.com/SanketKolhe2005/internsSanket_INBT020381_iNeuBytes.git
+git clone https://github.com/your-username/AI-Resume-Analyzer.git
 ```
 
-## Navigate to the Project
+Navigate to the project
 
 ```bash
-cd Major_Project
+cd AI-Resume-Analyzer
 ```
 
-## Install Dependencies
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run the Application
+Run the application
 
 ```bash
 python app.py
 ```
 
-Open your browser and visit:
+Open in browser
 
 ```
 http://127.0.0.1:5000
@@ -113,137 +129,77 @@ http://127.0.0.1:5000
 
 ---
 
-# 🚀 REST API
+## Training the Model
 
-## Analyze Resume
+Prepare the dataset
 
-**POST**
-
-```
-/api/analyze
+```bash
+python prepare_dataset.py
 ```
 
-### Form Data
+Train the model
 
-| Key | Type |
-|------|------|
-| resume | File |
+```bash
+python train_model.py
+```
 
-### Sample JSON Response
+Test prediction
 
-```json
-{
-  "success": true,
-  "name": "John Doe",
-  "email": "john@example.com",
-  "phone": "9876543210",
-  "ats_score": 85,
-  "skills": [
-    "Python",
-    "Flask",
-    "SQL"
-  ],
-  "recommended_roles": [
-    "AI Engineer",
-    "Python Developer"
-  ]
-}
+```bash
+python predict.py
 ```
 
 ---
 
-# 📊 ATS Score Calculation
+## Workflow
 
-The ATS score is calculated based on:
-
-- Programming Languages
-- Technical Skills
-- AI & Machine Learning Libraries
-- Frameworks
-- Resume Keywords
-
----
-
-# 💼 Recommended Job Roles
-
-- AI Engineer
-- Machine Learning Engineer
-- Data Scientist
-- Data Analyst
-- Python Developer
+1. Upload Resume (PDF)
+2. Extract Resume Text
+3. Predict Resume Category using AI Model
+4. Extract Candidate Details
+5. Calculate ATS Score
+6. Identify Missing Skills
+7. Recommend Suitable Job Roles
+8. Generate Downloadable Report
 
 ---
 
-# 📸 Screenshots
+## Future Enhancements
 
-## 🏠 Home Page
-
-![Home Page](screenshots/home_page.png)
-
----
-
-## 📊 Resume Analysis Dashboard (Part 1)
-
-![Dashboard 1](screenshots/resume_dashboard_1.png)
+- Deep Learning-based Resume Classification
+- Resume Ranking System
+- Resume vs Job Description Matching
+- Semantic Similarity using Sentence Transformers
+- LLM-powered Resume Feedback
+- Multi-language Resume Support
+- Resume Improvement Suggestions
 
 ---
 
-## 📊 Resume Analysis Dashboard (Part 2)
+## Results
 
-![Dashboard 2](screenshots/resume_dashboard_2.png)
-
----
-
-## 📄 Generated PDF Report
-
-![PDF Report](screenshots/pdf_report.png)
+- Successfully trained on a 50MB+ resume dataset.
+- AI-powered resume category prediction.
+- ATS score calculation with skill gap analysis.
+- Automatic report generation.
+- Improved project functionality using Machine Learning.
 
 ---
 
-## 🧪 API Testing
-
-![API Testing](screenshots/api_testing.png)
-
----
-
-## 📬 Postman API Response
-
-![Postman Response](screenshots/postman_api_response.png)
-
----
-
-# 📈 Future Improvements
-
-- Experience Extraction
-- Education Detection
-- Certifications Detection
-- Resume Ranking
-- Resume Keyword Optimization
-- OCR Support for Image-based Resumes
-- AI Chat Assistant
-- Multiple Resume Comparison
-- Grammar & Resume Formatting Suggestions
-
----
-
-# 👨‍💻 Author
+## Author
 
 **Sanket Kolhe**
 
-B.Tech Computer Engineering
+Computer Engineering Student
 
 MIT Academy of Engineering, Pune
 
-**GitHub:** https://github.com/SanketKolhe2005
+GitHub: https://github.com/SanketKolhe2005
 
-**LinkedIn:** https://www.linkedin.com/in/sanket-kolhe-b2683525b
-
----
-
-# 📄 License
-
-This project was developed as part of the **iNeuBytes Artificial Intelligence Internship** for educational and learning purposes.
+LinkedIn: https://www.linkedin.com/in/sanket-kolhe-b2683525b
 
 ---
 
-## ⭐ If you found this project helpful, don't forget to star the repository!
+## License
+
+This project is developed for educational and internship purposes.
