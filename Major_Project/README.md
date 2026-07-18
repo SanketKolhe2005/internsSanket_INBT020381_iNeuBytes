@@ -1,10 +1,6 @@
 # AI Resume Analyzer & ATS Score Predictor
 
-## Overview
-
-AI Resume Analyzer & ATS Score Predictor is a Flask-based web application that analyzes resumes using Artificial Intelligence and Natural Language Processing (NLP). The system evaluates resumes by extracting candidate information, predicting the most suitable job category using a trained machine learning model, calculating an ATS (Applicant Tracking System) score, identifying missing skills, recommending relevant job roles, and generating downloadable reports.
-
-This project was enhanced with a resume dataset (50MB+) and a trained machine learning model to improve resume classification accuracy.
+An AI-powered Resume Analyzer built with **Flask**, **Machine Learning**, and **Natural Language Processing (NLP)**. The application analyzes uploaded resumes, predicts the most suitable job category using a trained ML model, calculates an ATS score, identifies missing skills, recommends relevant job roles, and generates a downloadable PDF report.
 
 ---
 
@@ -12,52 +8,81 @@ This project was enhanced with a resume dataset (50MB+) and a trained machine le
 
 - Upload Resume (PDF)
 - Resume Text Extraction
-- Name, Email & Phone Number Extraction
-- AI-Based Resume Category Prediction
-- ATS Score Calculation
+- AI-Based Resume Classification
+- ATS Score Prediction
+- Candidate Information Extraction
+  - Name
+  - Email
+  - Phone Number
 - Skill Extraction
-- Missing Skill Identification
-- Job Role Recommendations
-- PDF Report Generation
+- Missing Skill Analysis
+- Job Role Recommendation
+- Download PDF Analysis Report
 - REST API Support
-- User-Friendly Flask Web Interface
 
 ---
 
-## Machine Learning Model
+## Machine Learning
 
 ### Dataset
-
 - Resume Dataset (50MB+)
 - 2,484 resumes
 - 24 job categories
 
-### Model
-
+### Preprocessing
+- Text Cleaning
 - TF-IDF Vectorization
+- Stopword Removal
+- Lowercase Conversion
+
+### Model
 - Linear Support Vector Classifier (LinearSVC)
-- Text Cleaning & Preprocessing
-- Balanced Class Weights
 
-### Model Performance
-
+### Performance
 - Accuracy: **72.23%**
+
+---
+
+## Tech Stack
+
+### Backend
+- Python
+- Flask
+
+### Machine Learning
+- Scikit-learn
+- Pandas
+- NumPy
+- Joblib
+
+### Resume Processing
+- PDFPlumber / PyPDF2
+- Regular Expressions
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
 
 ---
 
 ## Project Structure
 
-```
-AI Resume Analyzer/
+```text
+AI-Resume-Analyzer/
 │
 ├── app.py
 ├── ats.py
 ├── recommender.py
 ├── resume_parser.py
 ├── report_generator.py
-│
-├── dataset/
-│   └── Resume.csv
+├── train_model.py
+├── requirements.txt
+├── README.md
+├── Procfile
+├── job_roles.csv
+├── skills.csv
 │
 ├── models/
 │   └── resume_classifier.pkl
@@ -66,32 +91,18 @@ AI Resume Analyzer/
 │   ├── classification_report.txt
 │   └── confusion_matrix.png
 │
-├── templates/
+├── screenshots/
+│   ├── home_page.png
+│   ├── resume_dashboard_1.png
+│   ├── resume_dashboard_2.png
+│   ├── pdf_report.png
+│   ├── api_testing.png
+│   └── postman_api_response.png
+│
 ├── static/
-├── uploads/
-│
-├── prepare_dataset.py
-├── train_model.py
-├── predict.py
-│
-├── requirements.txt
-└── README.md
+├── templates/
+└── uploads/
 ```
-
----
-
-## Technologies Used
-
-- Python
-- Flask
-- Scikit-learn
-- Pandas
-- NumPy
-- Joblib
-- PDFPlumber / PyPDF2
-- HTML
-- CSS
-- JavaScript
 
 ---
 
@@ -100,10 +111,10 @@ AI Resume Analyzer/
 Clone the repository
 
 ```bash
-git clone https://github.com/your-username/AI-Resume-Analyzer.git
+git clone https://github.com/SanketKolhe2005/AI-Resume-Analyzer.git
 ```
 
-Navigate to the project
+Move into the project directory
 
 ```bash
 cd AI-Resume-Analyzer
@@ -121,7 +132,7 @@ Run the application
 python app.py
 ```
 
-Open in browser
+Open your browser
 
 ```
 http://127.0.0.1:5000
@@ -129,60 +140,87 @@ http://127.0.0.1:5000
 
 ---
 
-## Training the Model
-
-Prepare the dataset
-
-```bash
-python prepare_dataset.py
-```
-
-Train the model
+## Train the Model
 
 ```bash
 python train_model.py
 ```
 
-Test prediction
+The trained model is stored in:
 
-```bash
-python predict.py
+```
+models/resume_classifier.pkl
+```
+
+Training results are saved in:
+
+```
+results/
+├── classification_report.txt
+└── confusion_matrix.png
 ```
 
 ---
 
-## Workflow
+## Application Workflow
 
 1. Upload Resume (PDF)
 2. Extract Resume Text
-3. Predict Resume Category using AI Model
-4. Extract Candidate Details
+3. Predict Resume Category using AI
+4. Extract Candidate Information
 5. Calculate ATS Score
 6. Identify Missing Skills
-7. Recommend Suitable Job Roles
-8. Generate Downloadable Report
+7. Recommend Job Roles
+8. Generate PDF Report
 
 ---
 
-## Future Enhancements
+## Screenshots
 
-- Deep Learning-based Resume Classification
-- Resume Ranking System
-- Resume vs Job Description Matching
-- Semantic Similarity using Sentence Transformers
-- LLM-powered Resume Feedback
-- Multi-language Resume Support
-- Resume Improvement Suggestions
+### Home Page
+
+![Home](screenshots/home_page.png)
+
+### Resume Analysis Dashboard
+
+![Dashboard 1](screenshots/resume_dashboard_1.png)
+
+![Dashboard 2](screenshots/resume_dashboard_2.png)
+
+### PDF Report
+
+![PDF Report](screenshots/pdf_report.png)
+
+### API Testing
+
+![API](screenshots/api_testing.png)
+
+### Postman API Response
+
+![Postman](screenshots/postman_api_response.png)
 
 ---
 
 ## Results
 
-- Successfully trained on a 50MB+ resume dataset.
-- AI-powered resume category prediction.
-- ATS score calculation with skill gap analysis.
-- Automatic report generation.
-- Improved project functionality using Machine Learning.
+- AI-based Resume Classification
+- ATS Score Prediction
+- Automatic Skill Extraction
+- Missing Skill Detection
+- Job Role Recommendation
+- PDF Report Generation
+- REST API Integration
+
+---
+
+## Future Enhancements
+
+- Resume vs Job Description Matching
+- Deep Learning-Based Resume Classification
+- Sentence Transformer Similarity
+- LLM-Powered Resume Suggestions
+- Resume Ranking System
+- Multi-language Resume Support
 
 ---
 
@@ -190,13 +228,13 @@ python predict.py
 
 **Sanket Kolhe**
 
-Computer Engineering Student
+B.Tech Computer Engineering
 
 MIT Academy of Engineering, Pune
 
-GitHub: https://github.com/SanketKolhe2005
+**GitHub:** https://github.com/SanketKolhe2005
 
-LinkedIn: https://www.linkedin.com/in/sanket-kolhe-b2683525b
+**LinkedIn:** https://www.linkedin.com/in/sanket-kolhe-b2683525b
 
 ---
 
