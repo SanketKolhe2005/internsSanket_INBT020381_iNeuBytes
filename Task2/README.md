@@ -130,55 +130,73 @@ The models were evaluated using:
 
 # 📸 Results
 
-### Figure 1: Logistic Regression Classification Report
+## Figure 1: Logistic Regression Classification Report
+
+![Logistic Regression Classification Report](screenshots/Logistic%20Regression%20Classification%20Report.png)
 
 Classification report of the Logistic Regression model showing **87.82% accuracy** with balanced Precision, Recall, and F1-Score.
 
 ---
 
-### Figure 2: Logistic Regression Confusion Matrix
+## Figure 2: Logistic Regression Confusion Matrix
+
+![Logistic Regression Confusion Matrix](screenshots/Logistic%20Regression%20Confusion%20Matrix.png)
 
 Visualization of correctly and incorrectly classified positive and negative movie reviews.
 
 ---
 
-### Figure 3: Support Vector Machine Classification Report
+## Figure 3: Support Vector Machine Classification Report
+
+![SVM Classification Report](screenshots/SVM%20Classification%20Report.png)
 
 Performance metrics of the SVM model including Precision, Recall, F1-Score, and Accuracy.
 
 ---
 
-### Figure 4: Support Vector Machine Confusion Matrix
+## Figure 4: Support Vector Machine Confusion Matrix
+
+![SVM Confusion Matrix](screenshots/SVM%20Confusion%20Matrix.png)
 
 Confusion matrix showing prediction performance of the SVM classifier.
 
 ---
 
-### Figure 5: LSTM Accuracy Graph
+## Figure 5: LSTM Accuracy Graph
+
+![LSTM Accuracy Graph](screenshots/LSTM%20Accuracy%20Graph.png)
 
 Training and validation accuracy curves over multiple epochs.
 
 ---
 
-### Figure 6: LSTM Loss Graph
+## Figure 6: LSTM Loss Graph
+
+![LSTM Loss Graph](screenshots/LSTM%20Loss%20Graph.png)
 
 Training and validation loss curves demonstrating convergence of the LSTM model.
 
 ---
 
-### Figure 7: LSTM Classification Report
+## Figure 7: LSTM Classification Report
+
+![LSTM Classification Report](screenshots/LSTM%20Classification%20Report.png)
 
 Detailed classification metrics for the LSTM model.
 
 ---
 
-### Figure 8: LSTM Confusion Matrix
+## Figure 8: LSTM Confusion Matrix
+
+![LSTM Confusion Matrix](screenshots/LSTM%20confusion%20Matrix.png)
 
 Visualization of sentiment prediction results for the LSTM model.
 
 ---
 
-### Figure 9: Custom Review Prediction
+## Figure 9: Custom Review Prediction
+
+![Custom Review Prediction](screenshots/Custom%20Review%20Prediction.png)
 
 Sentiment prediction on custom movie reviews demonstrating real-world model usage.
 
